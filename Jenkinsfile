@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'checkout([$class: \'GitSCM\', branches: [[name: \'*/master\']], extensions: [], userRemoteConfigs: [[url: \'https://github.com/vijayyesh/myInfra2021Repo\']]])']]])
             }
         }
     
